@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 RUN useradd unhappy
 
 RUN mkdir -m 777 /app
-COPY flag.txt /
+RUN echo "DOHYO{$(head -n 32 /dev/urandom | od -A n -t x | head -n 1 | tr -d ' ')}" > /app/flag.txt
 COPY jail.py /app/
 COPY jail.xinetd /etc/xinetd.d/jail
 COPY getflag.c /tmp/getflag.c 
