@@ -1,0 +1,15 @@
+html {
+    background-image: url('grid.gif');
+    color: #000075;
+}
+
+.main {
+    margin: auto;
+    width: fit-content;
+    margin-top: 50px;
+    overflow-x: scroll;
+}
+
+.forcebreak {
+    word-break: break-all;
+}

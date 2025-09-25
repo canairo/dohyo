@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <title>duh!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FAE401
+        }
+
+        @font-face {
+            font-family: 'dokidoki';
+            src: url('../static/DokiDokiFantasia.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .radial-lines {
+            position: absolute;
+            width: 100vw;
+            aspect-ratio: 1/1;
+            background: repeating-radial-gradient(
+                #FAB33B, #FAB33B 7px, 
+                transparent 3px, transparent 20px
+            );
+            z-index: 1;
+        }
+
+        .boy {
+            position: relative;
+            color: #6D428B;
+            border: 5px double #6D428B;
+            border-radius: 3px;
+            font-size: 50px;
+            background-color: #FAE401;
+            z-index: 10;
+            padding-block: 2px;
+            padding-inline: 10px;
+            font-weight: bold;
+            font-family: 'Lilita One';
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow: hidden;
+            flex: 0 0 auto;
+        }
+
+
+        .boy-row {
+            overflow-x: hidden;
+            width: fit-content;
+            display:flex;
+            flex-wrap: nowrap;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .boy-row-right {
+            animation: marquee 5s linear infinite; 
+
+        }
+
+        .boy-row-left {
+            animation: marquee-left 5s linear infinite; 
+
+        }
+
+        .color-row {
+            width: 100vw;
+            position: absolute;
+            height: 20px;
+            display: flex;
+            z-index: 9
+        }
+
+        .color-row div {
+            flex: 1;
+            height: 5px;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-20%);
+            }
+        }
+
+        @keyframes marquee-left {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(20%);
+            }
+        }
+
+        .mike {
+            position: absolute;
+            z-index: 5;
+            left: -1%;
+        }
+
+        h1 {
+            font-size: 250px;
+            z-index: 10;
+            color: white;
+            text-shadow: 5px 5px 0px #FAE401, 10px 10px 0px #FE73A0, 15px 15px 0px #673DCB, 20px 20px 0px #22D8CA;
+            font-family: 'Lilita One';
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(-15deg) translateY(50px); }
+            50% { transform: rotate(15deg) translateY(-50px); }
+            100% { transform: rotate(-15deg) translateY(50px); }
+        }
+
+        @keyframes teto-sway {
+            0% { transform: rotate(15deg) translateY(50px); }
+            50% { transform: rotate(-15deg) translateY(-50px); }
+            100% { transform: rotate(15deg) translateY(50px); }
+        }
+
+        .trc {
+            position: absolute;
+            width: 250px;
+            z-index: 10;
+            filter: drop-shadow(5px 5px 0px white);
+        }
+
+        .boxme {
+            background-color: yellow;
+            color: #673DCB;
+            position: absolute;
+            font-size: 20px;
+            z-index: 10;
+            padding-inline: 15px;
+            outline: 2px solid #673DCB;
+        }
+
+        .wave-text span {
+            display: inline-block;
+            animation: wave 1.5s infinite ease-in-out;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="color-row" style="top: 0;">
+        <div style="background-color:#FE73A0"></div>
+        <div style="background-color:#673DCB"></div>
+        <div style="background-color:#FFFFFF"></div>
+        <div style="background-color:#22D8CA"></div>
+        <div style="background-color:#673DCB"></div>
+        <div style="background-color:#FFFFFF"></div>
+        <div style="background-color:#22D8CA"></div>
+    </div>
+
+    <div class="color-row" style="bottom: -15px;">
+        <div style="background-color:#FE73A0"></div>
+        <div style="background-color:#673DCB"></div>
+        <div style="background-color:#FFFFFF"></div>
+        <div style="background-color:#22D8CA"></div>
+        <div style="background-color:#673DCB"></div>
+        <div style="background-color:#FFFFFF"></div>
+        <div style="background-color:#22D8CA"></div>
+    </div>
+
+    <div class="boy-row boy-row-left" style="top: 5%">
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+    </div>
+
+    <div class="boy-row boy-row-right" style="bottom: 5%">
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+        <div class="boy">;-b ;-b boy;</div>
+        <div class="boy">{{ duh }}</div>
+        <div class="boy">☺</div>
+    </div>
+
+    <img src="../static/trc.png" class="trc" style="top: 0; right: 0">
+    <img src="../static/trc.png" class="trc" style="top: 0; left: 0; transform: scale(-1, 1)">
+    <img src="../static/trc.png" class="trc" style="bottom: 0; right: 0; transform: scale(1, -1)">
+    <img src="../static/trc.png" class="trc" style="bottom: 0; left: 0; transform: scale(-1, -1)">
+    <form style="position: relative; z-index: 10; display: flex; height: 50%; align-items: center; gap: 200px" action="/" method="POST">
+        <h1>boy!</h1>
+        <input type=text id='duh' name='duh' style="font-size: 50px; text-align: center; width: 250px; height: 100px; box-shadow: 5px 5px 0px #FAE401, 10px 10px 0px #FE73A0, 15px 15px 0px #673DCB, 20px 20px 0px #22D8CA; font-family: 'Lilita One'" placeholder="find a boy!">
+    </form>
+
+    <div class="boxme" style="top:50px; left: 50px">男生</div>
+    <div class="boxme" style="top:160px; left: 70px">男生</div>
+    <div class="boxme" style="top:290px; left: 30px">男生</div>
+    <div class="boxme" style="top:380px; left: 50px">男生</div>
+    <div class="boxme" style="top:460px; left: 100px">男生</div>
+    <div class="boxme" style="top:590px; left: 25px">男生</div>
+    <div class="boxme" style="bottom:50px; right: 40px">男生</div>
+    <div class="boxme" style="bottom:200px; right: 50px">男生</div>
+    <div class="boxme" style="bottom:250px; right: 90px">男生</div>
+    <div class="boxme" style="bottom:350px; right: 60px">男生</div>
+    <div class="boxme" style="bottom:430px; right: 80px">男生</div>
+    <div class="boxme" style="bottom:550px; right: 110px">男生</div>r
+
+    <h1 class="wave-text" style="letter-spacing: -10px; position: absolute; font-size: 80px; top: 15%; text-shadow: 5px 5px 0px black;"></h1>
+
+    <div class="radial-lines"></div>
+    
+    <!-- css inspired by https://www.youtube.com/watch?v=c56TpxfO9q0, it's all irrelevant to the challenge (like the css for all my other webs. just wanted to have some fun :) -cane -->
+    
+    <!--right, here's the source
+    
+from string import printable
+from flask import Flask, request, render_template, send_file, redirect, url_for, flash
+import sqlite3
+import os
+from secret import flag
+
+def init_db():
+    with sqlite3.connect('boy.db') as conn:
+        conn.execute('''CREATE TABLE IF NOT EXISTS duh (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        boy TEXT,
+                        duhhh TEXT)''')
+
+        conn.execute('''CREATE TABLE IF NOT EXISTS flag (
+                        flagtext TEXT)''')
+        
+        duh = [("duh", "duh!"), ("yeah", "yeah!"), ("lol", "lol!")]
+        conn.executemany('''INSERT INTO duh (boy, duhhh) VALUES (?, ?)''', duh)
+        conn.execute('''INSERT INTO flag (flagtext) VALUES (?)''', (flag,))
+
+init_db()
+def search(boy):
+    try: 
+        with sqlite3.connect('boy.db') as conn:
+            # does this work? duh it does...
+            blacklist = (char for char in printable if char not in "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnoprqstuvwxyz")
+
+            if 'flag' in boy: return "nope!"
+            
+            filtered_term = ''
+            for char in boy:
+                if char not in blacklist:
+                    filtered_term += char
+
+            cursor = conn.cursor()
+            query = f"SELECT duhhh FROM duh WHERE boy = '{filtered_term}'"
+            cursor.execute(query)
+            result = cursor.fetchone()
+
+            if result is None: result = "duh :/" 
+            else: 
+                result = result[0]
+                if "SSMCTF" in result: return "nope!"
+        
+            return result
+    except Exception as e:
+        return str(e)
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = os.urandom(64)
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        duh = request.form['duh']
+        return render_template('base.html', duh=search(duh))
+    return render_template('base.html', duh='duh')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)
+    
+    -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"ec0d7e9ac5024fe1b99c673a0f5f2c68","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+    <script>
+        const text = "テレパシー";
+        const container = document.querySelector(".wave-text");
+
+        text.split("").forEach((char, index) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.style.animationDelay = `${index * 0.1}s`;
+            container.appendChild(span);
+        });
+    </script>
+</html>

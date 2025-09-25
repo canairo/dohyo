@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Title}}</title>
+    <link href="/static/style.css" rel=stylesheet>
+</head>
+<body>
+    
+    <div class="main">
+        <h1>{{.Title}}</h1>
+        <p><em>poasted at {{.CreatedAt.Format "02 Jan 2006 15:04"}}</em></p>
+        <p><em>{{.Length}} chars</em></p>
+        <div class="forcebreak">
+            <p>{{.Content | safeHTML}}</p>
+        </div>
+        <a href="/posts/new">← make another post</a>
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"ec0d7e9ac5024fe1b99c673a0f5f2c68","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
