@@ -3,7 +3,7 @@ from os import urandom
 
 flag = 'DOHYO{' + urandom(16).hex() + '}'
 flag_bytes = bytes_to_long(flag.encode())
-coeffs = [flag_bytes] + [getPrime(20*8) for i in range(49)]
+coeffs = [flag_bytes] + [getPrime(20*8) for i in range(250)]
 
 def f(x):
     s = 0
@@ -11,5 +11,5 @@ def f(x):
         s += coeff * x ** power
     return s
 
-for i in range(250):
+for i in range(1, 200):
     print(f'f({i}) = {f(i)}')
